@@ -1,0 +1,55 @@
+.text {
+    text-align: center;
+    padding: 1rem;
+    font-family: josefin sans,sans-serif !important;
+}
+
+.navItem {
+    font-family: josefin sans,sans-serif !important;
+    padding: 0px 10px 0px 10px;
+    color: #000;
+}
+
+.brand {
+    font-family: josefin sans,sans-serif !important;
+    padding: 0px 10px 0px 10px;
+    color: #000;
+}
+
+.bg-none {
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+p {
+    line-height: 1;
+    font-size: 1rem;
+    font-size: 1.3rem;
+    color: #474040;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+@media (max-width: 860px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #474040;
+    }
+    
+}
