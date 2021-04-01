@@ -3,20 +3,19 @@ import axios from 'axios';
 import {Navbar, Nav, Container} from 'react-bootstrap';
 import SingleImage from './singleImage.js';
 import InfiniteScroll from 'react-infinite-scroll-component';
-
+import "../css/typography.css";
+import "../css/spacing.css";
 
 function MainContent() {
-    const [state, setState] = useState({images:[], search:""});
+    const [state, setState] = useState({images:[], search:"Table"});
     
     useEffect(() => {
         fetchImages();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    console.log(state);
-
     const fetchImages = (count = 10) => {
-        const apiRoot = "https://api.unsplash.com";
+        const apiRoot = "https://api.unsplash.co";
         const accessKey = process.env.REACT_APP_ACCESSKEY;
     
         axios
@@ -46,16 +45,18 @@ function MainContent() {
 
     return (
         <section>
+            <header className="text padding-4">
             <Navbar bg="none" variant="light">
                 <Nav className="mr-auto">
                     <Container>
-                        <Nav.Link onClick={() => {changeSearch("")}} >All</Nav.Link>
-                        <Nav.Link onClick={() => {changeSearch("Dogs")}}>Dogs</Nav.Link>
-                        <Nav.Link onClick={() => {changeSearch("Cats")}}>Cat</Nav.Link>
-                        <Nav.Link onClick={() => {changeSearch("Wallpaper")}}>Wallpaper</Nav.Link>
+                        <Nav.Link onClick={() => {changeSearch("Table")}} ><span className="navItem">Tables</span></Nav.Link>
+                        <Nav.Link onClick={() => {changeSearch("Dogs")}}><span className="navItem">Dogs</span></Nav.Link>
+                        <Nav.Link onClick={() => {changeSearch("Cats")}}><span className="navItem">Cats</span></Nav.Link>
+                        <Nav.Link onClick={() => {changeSearch("Wallpaper")}}><span className="navItem">Wallpaper</span></Nav.Link>
                     </Container>
                 </Nav>
             </Navbar>
+            </header>
 
             <InfiniteScroll
                 dataLength={state.images.length}
@@ -63,14 +64,13 @@ function MainContent() {
                 hasMore={true}
             >
 
-                <Container>
+                <Container fluid>
                     {state.images.map(image => (
-                        <SingleImage url={image.urls.thumb} key={image.id} des={image.description} />
+                        <SingleImage url={image.urls.thumb} key={image.id} id={image.id} des={image.description} />
                     ))}
                 </Container>
 
             </InfiniteScroll>
-
         </section>
     );
 }

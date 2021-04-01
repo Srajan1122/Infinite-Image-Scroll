@@ -1,8 +1,19 @@
 import {Image} from 'react-bootstrap';
+import '../css/singleImage.css';
 
-function SingleImage({url, key, des}) {
+function SingleImage({url, id, des}) {
+
+  const makeVisible = () => {
+    var x = document.getElementById(id);
+    x.style.opacity = 1;
+  }
+
+  setTimeout(makeVisible, 300);
+
   return (
-    <Image key={key} src={url} alt={des} />
+    <div className="image-div">
+      <Image className="image" src={url} id={id} alt={des} />
+    </div>
   );
 }
 
