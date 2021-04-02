@@ -2,7 +2,10 @@
 
 This website shows image grid with inifinite scroll. The images are loaded from the [Unsplash Developer API](https://unsplash.com/developers)
 
-## Build With
+### Project Link
+- [Srajan Porfolio](https://inspiring-noyce-ace98e.netlify.app/)
+
+### Build With
 - [React.js](https://reactjs.org/)
 - [React-Bootstrap](https://react-bootstrap.github.io/)
 - [React-Infinite Scroll Component](https://www.npmjs.com/package/react-infinite-scroll-component)
@@ -10,11 +13,11 @@ This website shows image grid with inifinite scroll. The images are loaded from 
 
 # Getting Started
 
-## Prerequisites
+### Prerequisites
 
 Make sure Node.js is installed on your system
 
-## Installation Setup
+### Installation Setup
 
 Clone the repository using following commnad:
 
@@ -43,3 +46,7 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+# Developer
+- Srajan Shetty
+  - [LinkeIn](https://www.linkedin.com/in/srajan1122/)
