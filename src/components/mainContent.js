@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {Navbar, Nav, Container} from 'react-bootstrap';
 import SingleImage from './singleImage.js';
+import Loader from './loader.js';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import "../css/typography.css";
 import "../css/spacing.css";
@@ -14,7 +15,6 @@ function MainContent() {
         fetchImages();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
 
     const generateKey = (pre) => {
         return `${ pre }_${ new Date().getMilliseconds() }_${Math.random()}`;
@@ -68,6 +68,7 @@ function MainContent() {
                 dataLength={state.images.length}
                 next={fetchImages}
                 hasMore={true}
+                loader={<Loader />}
             >
             <SRLWrapper>
                 <Container fluid>
