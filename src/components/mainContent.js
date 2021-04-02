@@ -9,7 +9,7 @@ import "../css/spacing.css";
 import { SRLWrapper } from "simple-react-lightbox";
 
 function MainContent() {
-    const [state, setState] = useState({images:[], search:"Table"});
+    const [state, setState] = useState({images:[], search:""});
     
     useEffect(() => {
         fetchImages();
@@ -55,10 +55,12 @@ function MainContent() {
             <Navbar bg="none" variant="light">
                 <Nav className="mr-auto">
                     <Container>
-                        <Nav.Link onClick={() => {changeSearch("Table")}} ><span className="navItem">Tables</span></Nav.Link>
-                        <Nav.Link onClick={() => {changeSearch("Dogs")}}><span className="navItem">Dogs</span></Nav.Link>
-                        <Nav.Link onClick={() => {changeSearch("Cats")}}><span className="navItem">Cats</span></Nav.Link>
-                        <Nav.Link onClick={() => {changeSearch("Wallpaper")}}><span className="navItem">Wallpaper</span></Nav.Link>
+                        <Nav.Link onClick={() => {changeSearch("")}} ><span className="navItem">All</span></Nav.Link>
+                        <Nav.Link onClick={() => {changeSearch("Mandala")}}><span className="navItem">Mandala</span></Nav.Link>
+                        <Nav.Link onClick={() => {changeSearch("Desserts")}}><span className="navItem">Desserts</span></Nav.Link>
+                        <Nav.Link onClick={() => {changeSearch("Decoration")}}><span className="navItem">Decoration</span></Nav.Link>
+                        <Nav.Link onClick={() => {changeSearch("Nature")}}><span className="navItem">Nature</span></Nav.Link>
+                        <Nav.Link onClick={() => {changeSearch("Vintage")}}><span className="navItem">Vintage</span></Nav.Link>
                     </Container>
                 </Nav>
             </Navbar>
