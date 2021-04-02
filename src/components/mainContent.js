@@ -20,7 +20,7 @@ function MainContent() {
         return `${ pre }_${ new Date().getMilliseconds() }_${Math.random()}`;
     }
 
-    const fetchImages = (count = 10) => {
+    const fetchImages = (count = 20) => {
         const apiRoot = "https://api.unsplash.com";
         const accessKey = process.env.REACT_APP_ACCESSKEY;
     
@@ -40,7 +40,7 @@ function MainContent() {
         const accessKey = process.env.REACT_APP_ACCESSKEY;
     
         axios
-          .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=10&query=${s}`)
+          .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=20&query=${s}`)
           .then(res => {
             setState({images: [...res.data], search:s});
           })
