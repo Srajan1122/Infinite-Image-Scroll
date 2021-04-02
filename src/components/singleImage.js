@@ -14,7 +14,7 @@ function SingleImage({url, url2, id, des}) {
   return (
     <Col md={4} sm={6} xs={12} lg={3}>
       <div className="image-div">
-        <a href={url2}>
+        <a href={url2} className="h">
           <Image className="image"  src={url} id={id} alt={des} />
         </a>
       </div>

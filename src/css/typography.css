@@ -13,7 +13,8 @@
 .brand {
     font-family: josefin sans,sans-serif !important;
     padding: 0px 10px 0px 10px;
-    color: #000;
+    color: #4c8bf5 !important;
+    font-weight: 550;
 }
 
 .bg-none {
@@ -30,9 +31,12 @@ p {
     line-height: 1;
     font-size: 1rem;
     font-size: 1.3rem;
-    color: #474040;
+    color: #918a8a;
 }
 
+.color {
+    color: #4c8bf5;
+}
 
 
 
