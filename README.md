@@ -1,6 +1,6 @@
 # About the Project
 
-This website shows image grid with inifinite scroll. The images are loaded from the [Unsplash Developer API](https://unsplash.com/developers)
+This website shows image grid with infinite scroll. The images are loaded from the [Unsplash Developer API](https://unsplash.com/developers)
 
 ### Project Link
 - [Srajan Porfolio](https://distracted-kalam-f04d51.netlify.app/)
