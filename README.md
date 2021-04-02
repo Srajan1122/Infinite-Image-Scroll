@@ -15,15 +15,14 @@ This website shows image grid with infinite scroll. The images are loaded from t
 
 ### Content
 
-> Tabs to view different collection of images from Unsplash API
+Tabs to view different collection of images from Unsplash API
 ![image](https://user-images.githubusercontent.com/53133493/113438451-3849b000-9406-11eb-92c3-80f82165be40.png)
 
-> Infinite scrolling of images
+Infinite scrolling of images
 ![image](https://user-images.githubusercontent.com/53133493/113438195-b2c60000-9405-11eb-818e-363796f83601.png)
 
-> Gallery mode to view images individually
+Gallery mode to view images individually
 ![image](https://user-images.githubusercontent.com/53133493/113438344-033d5d80-9406-11eb-8d6d-f066f78aee7c.png)
-
 
 # Getting Started
 
