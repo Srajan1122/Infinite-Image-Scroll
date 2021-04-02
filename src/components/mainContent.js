@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {Navbar, Nav, Container} from 'react-bootstrap';
+import {Navbar, Nav, Container, Row } from 'react-bootstrap';
 import SingleImage from './singleImage.js';
-import Loader from './loader.js';
+import { Loader } from './loader';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import "../css/typography.css";
 import "../css/spacing.css";
@@ -63,7 +63,6 @@ function MainContent() {
                 </Nav>
             </Navbar>
             </header>
-
             <InfiniteScroll
                 dataLength={state.images.length}
                 next={fetchImages}
@@ -72,9 +71,11 @@ function MainContent() {
             >
             <SRLWrapper>
                 <Container fluid>
+                    <Row>
                     {state.images.map(image => (
                         <SingleImage url={image.urls.thumb} url2={image.urls.full} key={ generateKey(image.id) } id={image.id} des={image.description} />
                     ))}
+                    </Row>
                 </Container>
             </SRLWrapper>
 

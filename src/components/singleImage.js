@@ -1,4 +1,4 @@
-import {Image} from 'react-bootstrap';
+import {Col, Image} from 'react-bootstrap';
 import '../css/singleImage.css';
 
 
@@ -12,11 +12,13 @@ function SingleImage({url, url2, id, des}) {
   setTimeout(makeVisible, 200);
   
   return (
-    <div className="image-div">
-      <a href={url2}>
-        <Image className="image"  src={url} id={id} alt={des} />
-      </a>
-    </div>
+    <Col md={4} sm={6} xs={12} lg={3}>
+      <div className="image-div">
+        <a href={url2}>
+          <Image className="image"  src={url} id={id} alt={des} />
+        </a>
+      </div>
+    </Col>
   );
 }
 
