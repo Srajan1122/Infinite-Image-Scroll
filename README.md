@@ -1,5 +1,7 @@
 # About the Project
 
+![image](https://user-images.githubusercontent.com/53133493/113437958-3e8b5c80-9405-11eb-86b0-b49c83f07455.png)
+
 This website shows image grid with infinite scroll. The images are loaded from the [Unsplash Developer API](https://unsplash.com/developers)
 
 ### Project Link
@@ -10,6 +12,18 @@ This website shows image grid with infinite scroll. The images are loaded from t
 - [React-Bootstrap](https://react-bootstrap.github.io/)
 - [React-Infinite Scroll Component](https://www.npmjs.com/package/react-infinite-scroll-component)
 - [Simple React Lightbox](https://www.npmjs.com/package/simple-react-lightbox)
+
+### Content
+
+> Tabs to view different collection of images from Unsplash API
+![image](https://user-images.githubusercontent.com/53133493/113438451-3849b000-9406-11eb-92c3-80f82165be40.png)
+
+> Infinite scrolling of images
+![image](https://user-images.githubusercontent.com/53133493/113438195-b2c60000-9405-11eb-818e-363796f83601.png)
+
+> Gallery mode to view images individually
+![image](https://user-images.githubusercontent.com/53133493/113438344-033d5d80-9406-11eb-8d6d-f066f78aee7c.png)
+
 
 # Getting Started
 
