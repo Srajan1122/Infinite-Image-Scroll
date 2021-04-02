@@ -5,6 +5,7 @@ import SingleImage from './singleImage.js';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import "../css/typography.css";
 import "../css/spacing.css";
+import { SRLWrapper } from "simple-react-lightbox";
 
 function MainContent() {
     const [state, setState] = useState({images:[], search:"Table"});
@@ -14,8 +15,13 @@ function MainContent() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+
+    const generateKey = (pre) => {
+        return `${ pre }_${ new Date().getMilliseconds() }_${Math.random()}`;
+    }
+
     const fetchImages = (count = 10) => {
-        const apiRoot = "https://api.unsplash.co";
+        const apiRoot = "https://api.unsplash.com";
         const accessKey = process.env.REACT_APP_ACCESSKEY;
     
         axios
@@ -63,12 +69,13 @@ function MainContent() {
                 next={fetchImages}
                 hasMore={true}
             >
-
+            <SRLWrapper>
                 <Container fluid>
                     {state.images.map(image => (
-                        <SingleImage url={image.urls.thumb} key={image.id} id={image.id} des={image.description} />
+                        <SingleImage url={image.urls.thumb} url2={image.urls.full} key={ generateKey(image.id) } id={image.id} des={image.description} />
                     ))}
                 </Container>
+            </SRLWrapper>
 
             </InfiniteScroll>
         </section>
