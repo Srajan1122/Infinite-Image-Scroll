@@ -6,7 +6,7 @@ function TextSection() {
     <section className="text">
       <Jumbotron className="bg-none">
         <Container>
-            <h1>Srajan <span className="color">Shetty</span></h1>
+            <h1><span className="color">S</span>rajan <span className="color">S</span>hetty</h1>
             <p>I’m a freelance software designer, with +2 years of experience</p>
         </Container>
       </Jumbotron>

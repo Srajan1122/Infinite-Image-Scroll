@@ -5,9 +5,15 @@
 }
 
 .navItem {
+    font-size: 1rem;
     font-family: josefin sans,sans-serif !important;
     padding: 0px 10px 0px 10px;
     color: #000;
+    transition: 1s ease;
+}
+
+.navItem:hover {
+    color: #4c8bf5;
 }
 
 .brand {
