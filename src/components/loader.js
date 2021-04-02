@@ -1,14 +1,14 @@
 import "../css/loader.css";
 
-function Loader() {
+export const Loader = () => {
   return (
-    <div className="lds-ellipsis">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div className="center">
+        <div className="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
   );
 }
-
-export default Loader;
