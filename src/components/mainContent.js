@@ -7,9 +7,19 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import "../css/typography.css";
 import "../css/spacing.css";
 import { SRLWrapper } from "simple-react-lightbox";
+import $ from 'jquery';
+
 
 function MainContent() {
     const [state, setState] = useState({images:[], search:""});
+
+    $(function(){
+        $(".container a").on('click', function(){
+          console.log("Hello");
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active')
+        })
+    });
     
     useEffect(() => {
         fetchImages();
@@ -55,7 +65,7 @@ function MainContent() {
             <Navbar bg="none" variant="light">
                 <Nav className="mr-auto">
                     <Container>
-                        <Nav.Link onClick={() => {changeSearch("")}} ><span className="navItem">All</span></Nav.Link>
+                        <Nav.Link onClick={() => {changeSearch("")}} className="active"><span className="navItem">All</span></Nav.Link>
                         <Nav.Link onClick={() => {changeSearch("Mandala")}}><span className="navItem">Mandala</span></Nav.Link>
                         <Nav.Link onClick={() => {changeSearch("Desserts")}}><span className="navItem">Desserts</span></Nav.Link>
                         <Nav.Link onClick={() => {changeSearch("Decoration")}}><span className="navItem">Decoration</span></Nav.Link>
