@@ -5,7 +5,7 @@
 This website shows image grid with infinite scroll. The images are loaded from the [Unsplash Developer API](https://unsplash.com/developers)
 
 ### Project Link
-- [Srajan Porfolio](https://distracted-kalam-f04d51.netlify.app/)
+- [Srajan Porfolio](https://srajan-porfolio.netlify.app/)
 
 ### Build With
 - [React.js](https://reactjs.org/)
